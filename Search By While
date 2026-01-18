@@ -1,0 +1,30 @@
+DECLARE Names : ARRAY[1:3] OF STRING
+DECLARE Count : INTEGER
+DECLARE Found : BOOLEAN
+DECLARE SearchValue: STRING
+
+
+
+Names[1] ← "Ahmed"
+Names[2] ← "Amir"
+Names[3] ← "Mona"
+
+Found ← FALSE
+Count ← 1
+
+OUTPUT "Enter Name to Search for: "
+INPUT SearchValue
+
+WHILE Count < 4 AND Found = FALSE
+    IF Names[Count] = SearchValue THEN
+        Found ← TRUE
+    ELSE
+        Count ← Count + 1
+    ENDIF
+ENDWHILE 
+
+IF Found THEN
+    OUTPUT "Found"
+ELSE 
+    OUTPUT "NOt Found"
+ENDIF
