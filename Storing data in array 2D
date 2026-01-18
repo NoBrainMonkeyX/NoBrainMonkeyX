@@ -1,0 +1,12 @@
+DECLARE Names : ARRAY[1:40] OF STRING
+DECLARE Marks : ARRAY[1:40] OF INTEGER
+
+DECLARE Count : INTEGER
+
+FOR count ← 1 TO 40
+    OUTPUT "Name for student:"
+    INPUT Names [count]
+
+    OUTPUT "Mark for", Names[count]
+    INPUT Marks[count]
+NEXT count
