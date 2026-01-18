@@ -1,0 +1,22 @@
+DECLARE Amount : REAL
+DECLARE Points : INTEGER
+
+Points ← 0
+
+OUTPUT "Enter your Amount"
+INPUT Amount
+
+IF Amount <10 THEN
+    Points ← Amount * 5
+    
+ELSE IF Amount >10 AND Amount <100 THEN
+    Points ← Amount * 7
+    
+    ELSE
+        IF Amount >100 THEN
+     Points ← Amount * 10
+    
+        ENDIF
+    ENDIF
+ ENDIF   
+ OUTPUT "Your Total Points are:" , Points
