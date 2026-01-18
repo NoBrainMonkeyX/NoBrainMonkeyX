@@ -1,0 +1,22 @@
+DECLARE Amount : INTEGER
+DECLARE FiftyDoller : INTEGER
+DECLARE TwentyDoller : INTEGER
+DECLARE TenDoller : INTEGER
+DECLARE Temp : INTEGER
+
+OUTPUT "Enter amount"
+INPUT Amount
+
+IF Amount > 500 THEN
+    OUTPUT "Refused - amount is too large"
+ELSE
+    IF Amount MOD 10 <> 0 THEN
+        OUTPUT "refused - amount must be multiple of 10"
+    ELSE
+        FiftyDoller ← Amount DIV 50
+        Temp ← Amount MOD 50
+        TwentyDoller ← Temp DIV 20
+        Temp ← Temp MOD 20
+        TenDoller ← Temp DIV 10
+    ENDIF
+ENDIF
