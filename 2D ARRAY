@@ -1,0 +1,9 @@
+DECLARE ThisTable : ARRAY[1:4,1:6] OF INTEGER
+DECLARE row : INTEGER
+DECLARE Colmun : INTEGER
+
+FOR row ← 1 TO 4
+    FOR Colmun ← 1 TO 6
+        ThisTable[row,Colmun] ← 0
+    NEXT Colmun
+NEXT row
