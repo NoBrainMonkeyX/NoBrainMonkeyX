@@ -1,0 +1,34 @@
+DECLARE Data : ARRAY [1:3] OF INTEGER
+DECLARE i : INTEGER
+DECLARE J : INTEGER
+DECLARE n : INTEGER
+DECLARE C : INTEGER
+DECLARE Swap : BOOLEAN
+DECLARE Temp : INTEGER
+
+n ← 3
+C ← 0
+
+Data[1] ← 10
+Data[2] ← 9
+Data[3] ← 8
+
+REPEAT
+    Swap ← FALSE 
+    FOR J ← 1 TO n - 1
+        C ← C + 1
+        IF Data[J] > Data[J + 1] THEN
+            Temp ← Data[J]
+            Data[J] ← Data[J + 1]
+            Data[J + 1] ← Temp
+            Swap ← TRUE
+        ENDIF
+    NEXT J
+    n ← n - 1
+UNTIL Swap = FALSE OR n = 1
+
+FOR i ← 1 TO 3
+    OUTPUT Data[i]
+NEXT i
+
+OUTPUT "c = ", C
