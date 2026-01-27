@@ -1,0 +1,21 @@
+ Console.WriteLine("Welcome!, Ticktes are 5$. Please insert cash");
+
+        Double Cash = Convert.ToDouble(Console.ReadLine());
+
+        if (Cash < 5)
+        {
+            Console.WriteLine("That's Not Enough Money.");
+        }
+        else if (Cash == 5)
+        {
+            Console.WriteLine("Here Is Your Ticket.");
+        }
+        else
+        {
+            Double Change = Cash - 5;
+            Console.WriteLine("Here is Your Ticket And " + Change + " Dollar in Change.");
+        }
+
+
+        // wait before closing
+        Console.ReadKey();
